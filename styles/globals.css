@@ -2,6 +2,113 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family:'Courier New', Courier, monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game_menu {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.game_board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+}
+
+.square {
+  background-color: #eee;
+  border-radius: 8px;
+  box-shadow: 0px 4px #ddd;
+  text-align: center;
+  font-size: 64px;
+  line-height: 100px;
+  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.modal {
+  width: 250px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 0px gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  position: fixed;
+  top: 50%;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+}
+
+.square.highlight {
+  background-color:bisque;
+  box-shadow: none;
+}
+
+.modal.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  display:none;
+  background-color:transparent;
+  opacity:0.5;
+}
+
+.overlay.show{
+  display:block;
+}
+
+.modal_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 36px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -23,4 +130,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
