@@ -34,9 +34,16 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
+  opacity: 0;
+  animation: game_board_show 1.5s  linear forwards;
 }
 
-.square {
+@keyframes game_board_show{
+  100% {opacity: 1;}
+}
+
+
+.square{
   background-color: #eee;
   border-radius: 8px;
   box-shadow: 0px 4px #ddd;
@@ -104,30 +111,36 @@ button {
   font-weight: 600;
 }
 
-
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+path{
+  fill: none;
+  stroke-width: 1;
+  stroke: black;
+  stroke-dasharray:5000;
+  animation: dash 1.5s linear forwards;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes dash{
+  from {
+    stroke-dashoffset: 6000;
   }
-  body {
-    color: white;
-    background: black;
+  to{
+    stroke-dashoffset: 0;
   }
-} */
+}
+
+.svg_board {
+  display: flex;
+  position:absolute;
+  top: -9.2%;
+  left: 0.125%;
+  width:100%; 
+  height:900px;  
+  opacity: 1;
+  animation: hide_svg_board 1.5s linear forwards;
+}
+
+
+@keyframes hide_svg_board{
+  100% {opacity: 0;}
+}
+
+
