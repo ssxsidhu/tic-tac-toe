@@ -36,7 +36,7 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   opacity: 0;
-  animation: game_board_show 2s  linear forwards;
+  animation: game_board_show 2.3s ease-in forwards;
 }
 
 @keyframes game_board_show{
@@ -114,10 +114,10 @@ button {
 
 path{
   fill: none;
-  stroke-width: 1;
+  stroke-width: 8;
   stroke: black;
   stroke-dasharray:5000;
-  animation: dash 1.5s linear forwards;
+  animation: dash 2s linear forwards;
 }
 @keyframes dash{
   from {
