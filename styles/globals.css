@@ -19,6 +19,7 @@ h1 {
 }
 
 .game {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,9 +34,9 @@ h1 {
 .game_board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 8px;
+  grid-gap: 10px;
   opacity: 0;
-  animation: game_board_show 1.5s  linear forwards;
+  animation: game_board_show 2s  linear forwards;
 }
 
 @keyframes game_board_show{
@@ -128,14 +129,13 @@ path{
 }
 
 .svg_board {
-  display: flex;
   position:absolute;
-  top: -9.2%;
-  left: 0.125%;
+  top:-39%;
+  left: -0.0125%;
   width:100%; 
   height:900px;  
   opacity: 1;
-  animation: hide_svg_board 1.5s linear forwards;
+  animation: hide_svg_board 2s linear forwards;
 }
 
 
